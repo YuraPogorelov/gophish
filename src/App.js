@@ -65,7 +65,13 @@ const App = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {campaigns.map((camp) => (
+              {(rowsPerPage > 0
+                ? campaigns.slice(
+                    page * rowsPerPage,
+                    page * rowsPerPage + rowsPerPage
+                  )
+                : campaigns
+              ).map((camp) => (
                 <TableRow key={camp.id}>
                   <TableCell component='th' scope='row'>
                     {camp.name}
