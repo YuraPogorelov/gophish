@@ -39,7 +39,6 @@ const App = () => {
     );
     const data = await response.json();
     setCampaigns(data);
-    //console.log(data);
   };
 
   const handleChangePage = (event, newPage) => {
@@ -93,15 +92,6 @@ const App = () => {
           onChangePage={handleChangePage}
           onChangeRowsPerPage={handleChangeRowsPerPage}
         />
-        {/* {campaigns.map((camp) => (
-          <Campaigns
-            key={camp.id}
-            name={camp.name}
-            created_date={camp.created_date}
-            results={camp.results.length}
-            status={camp.status}
-          />
-        ))} */}
       </div>
     </div>
   );
