@@ -35,7 +35,7 @@ const App = () => {
 
   const getCampaign = async () => {
     const response = await fetch(
-      `https://dash.kronshtatd.ru:323/api/campaigns/?api_key=${API_KEY}`
+      `http://dash.kronshtatd.ru:323/api/campaigns/?api_key=${API_KEY}`
     );
     const data = await response.json();
     setCampaigns(data);
