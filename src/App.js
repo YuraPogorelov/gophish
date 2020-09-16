@@ -35,7 +35,7 @@ const App = () => {
 
   const getCampaign = async () => {
     const response = await fetch(
-      `http://161.35.16.211:323/api/campaigns/?api_key=${API_KEY}`
+      `https://dash.kronshtatd.ru//api/campaigns/?api_key=${API_KEY}`
     );
     const data = await response.json();
     setCampaigns(data);
@@ -62,7 +62,6 @@ const App = () => {
                 <TableCell align='center'>Дата создания</TableCell>
                 <TableCell align='center'>Пользователи</TableCell>
                 <TableCell align='center'>Статус</TableCell>
-                {/* <TableCell align='center'>Action</TableCell> */}
               </TableRow>
             </TableHead>
             <TableBody>
