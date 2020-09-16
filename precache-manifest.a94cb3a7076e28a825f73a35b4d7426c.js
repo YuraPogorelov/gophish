@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3ab978f31fdaea1e74d62d9b44780803",
+    "revision": "66deee3df2f54411680844bc229e3ff5",
     "url": "/gophish/index.html"
   },
   {
-    "revision": "21df24a6d7be68819a9e",
+    "revision": "3ae726f0d1a1228bd590",
     "url": "/gophish/static/css/main.69eda509.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gophish/static/js/2.2bccb882.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "21df24a6d7be68819a9e",
-    "url": "/gophish/static/js/main.feafd52f.chunk.js"
+    "revision": "3ae726f0d1a1228bd590",
+    "url": "/gophish/static/js/main.1d5a4555.chunk.js"
   },
   {
     "revision": "22a37fb4f05ede6efb4e",
