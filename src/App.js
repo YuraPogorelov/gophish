@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react';
 //import Campaigns from './Campaigns';
-//import * as moment from 'moment';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
+import TablePagination from '@material-ui/core/TablePagination';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
+import Button from '@material-ui/core/Button';
+
 const useStyles = makeStyles({
   table: {
-    minWidth: 650,
+    minWidth: 600,
   },
 });
 
@@ -24,6 +26,8 @@ const App = () => {
     'd978956e7a866d2b0816575052fbea8ffc4bfc14cdc57a53c09a185609ef6bd9';
 
   const [campaigns, setCampaigns] = useState([]);
+  const [page, setPage] = React.useState(0);
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   useEffect(() => {
     getCampaign();
@@ -35,9 +39,16 @@ const App = () => {
     );
     const data = await response.json();
     setCampaigns(data);
-    // const cretDate = moment(data.created_date).format('YYYY-MM-DD');
-    //console.log(cretDate);
     //console.log(data);
+  };
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
   };
 
   return (
@@ -49,9 +60,10 @@ const App = () => {
             <TableHead>
               <TableRow>
                 <TableCell>Название компании</TableCell>
-                <TableCell align='right'>Дата создания</TableCell>
-                <TableCell align='right'>Пользователи</TableCell>
-                <TableCell align='right'>Статус</TableCell>
+                <TableCell align='center'>Дата создания</TableCell>
+                <TableCell align='center'>Пользователи</TableCell>
+                <TableCell align='center'>Статус</TableCell>
+                {/* <TableCell align='center'>Action</TableCell> */}
               </TableRow>
             </TableHead>
             <TableBody>
@@ -60,14 +72,27 @@ const App = () => {
                   <TableCell component='th' scope='row'>
                     {camp.name}
                   </TableCell>
-                  <TableCell align='right'>{camp.created_date}</TableCell>
-                  <TableCell align='right'>{camp.results.length}</TableCell>
-                  <TableCell align='right'>{camp.status}</TableCell>
+                  <TableCell align='center'>{camp.created_date}</TableCell>
+                  <TableCell align='center'>{camp.results.length}</TableCell>
+                  <TableCell align='center'>
+                    <Button variant='outlined' color='primary'>
+                      {camp.status}
+                    </Button>
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
         </TableContainer>
+        <TablePagination
+          rowsPerPageOptions={[5, 10, 25]}
+          component='div'
+          count={campaigns.length}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          onChangePage={handleChangePage}
+          onChangeRowsPerPage={handleChangeRowsPerPage}
+        />
         {/* {campaigns.map((camp) => (
           <Campaigns
             key={camp.id}
