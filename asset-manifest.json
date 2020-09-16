@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/gophish/static/css/main.69eda509.chunk.css",
-    "main.js": "/gophish/static/js/main.45b222b9.chunk.js",
-    "main.js.map": "/gophish/static/js/main.45b222b9.chunk.js.map",
+    "main.js": "/gophish/static/js/main.8c3c14f5.chunk.js",
+    "main.js.map": "/gophish/static/js/main.8c3c14f5.chunk.js.map",
     "runtime-main.js": "/gophish/static/js/runtime-main.7d3868f1.js",
     "runtime-main.js.map": "/gophish/static/js/runtime-main.7d3868f1.js.map",
     "static/js/2.2bccb882.chunk.js": "/gophish/static/js/2.2bccb882.chunk.js",
     "static/js/2.2bccb882.chunk.js.map": "/gophish/static/js/2.2bccb882.chunk.js.map",
     "index.html": "/gophish/index.html",
-    "precache-manifest.fff44025cb234835b496f7fcde9eb7e9.js": "/gophish/precache-manifest.fff44025cb234835b496f7fcde9eb7e9.js",
+    "precache-manifest.7cc92cc8923b7035347a45729835b985.js": "/gophish/precache-manifest.7cc92cc8923b7035347a45729835b985.js",
     "service-worker.js": "/gophish/service-worker.js",
     "static/css/main.69eda509.chunk.css.map": "/gophish/static/css/main.69eda509.chunk.css.map",
     "static/js/2.2bccb882.chunk.js.LICENSE.txt": "/gophish/static/js/2.2bccb882.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.7d3868f1.js",
     "static/js/2.2bccb882.chunk.js",
     "static/css/main.69eda509.chunk.css",
-    "static/js/main.45b222b9.chunk.js"
+    "static/js/main.8c3c14f5.chunk.js"
   ]
 }
