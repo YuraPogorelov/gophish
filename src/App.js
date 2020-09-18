@@ -13,6 +13,8 @@ import Paper from '@material-ui/core/Paper';
 
 import Button from '@material-ui/core/Button';
 
+import DetailsIcon from '@material-ui/icons/Details';
+
 const useStyles = makeStyles({
   table: {
     minWidth: 600,
@@ -62,6 +64,7 @@ const App = () => {
                 <TableCell align='center'>Дата создания</TableCell>
                 <TableCell align='center'>Пользователи</TableCell>
                 <TableCell align='center'>Статус</TableCell>
+                <TableCell align='center'>Action</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -76,6 +79,9 @@ const App = () => {
                     <Button variant='outlined' color='primary'>
                       {camp.status}
                     </Button>
+                  </TableCell>
+                  <TableCell align='center'>
+                    <DetailsIcon />
                   </TableCell>
                 </TableRow>
               ))}
