@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/gophish/static/css/main.69eda509.chunk.css",
-    "main.js": "/gophish/static/js/main.2a9830c3.chunk.js",
-    "main.js.map": "/gophish/static/js/main.2a9830c3.chunk.js.map",
+    "main.js": "/gophish/static/js/main.2f2932f5.chunk.js",
+    "main.js.map": "/gophish/static/js/main.2f2932f5.chunk.js.map",
     "runtime-main.js": "/gophish/static/js/runtime-main.7d3868f1.js",
     "runtime-main.js.map": "/gophish/static/js/runtime-main.7d3868f1.js.map",
-    "static/js/2.b147b3c1.chunk.js": "/gophish/static/js/2.b147b3c1.chunk.js",
-    "static/js/2.b147b3c1.chunk.js.map": "/gophish/static/js/2.b147b3c1.chunk.js.map",
+    "static/js/2.0ed2b402.chunk.js": "/gophish/static/js/2.0ed2b402.chunk.js",
+    "static/js/2.0ed2b402.chunk.js.map": "/gophish/static/js/2.0ed2b402.chunk.js.map",
     "index.html": "/gophish/index.html",
-    "precache-manifest.850135e780b61c15bcb4b32d1fbc2ee1.js": "/gophish/precache-manifest.850135e780b61c15bcb4b32d1fbc2ee1.js",
+    "precache-manifest.2712adf937d1ae68b978125bc0a440c3.js": "/gophish/precache-manifest.2712adf937d1ae68b978125bc0a440c3.js",
     "service-worker.js": "/gophish/service-worker.js",
     "static/css/main.69eda509.chunk.css.map": "/gophish/static/css/main.69eda509.chunk.css.map",
-    "static/js/2.b147b3c1.chunk.js.LICENSE.txt": "/gophish/static/js/2.b147b3c1.chunk.js.LICENSE.txt"
+    "static/js/2.0ed2b402.chunk.js.LICENSE.txt": "/gophish/static/js/2.0ed2b402.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7d3868f1.js",
-    "static/js/2.b147b3c1.chunk.js",
+    "static/js/2.0ed2b402.chunk.js",
     "static/css/main.69eda509.chunk.css",
-    "static/js/main.2a9830c3.chunk.js"
+    "static/js/main.2f2932f5.chunk.js"
   ]
 }
