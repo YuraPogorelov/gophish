@@ -13,7 +13,9 @@ import Paper from '@material-ui/core/Paper';
 
 import Button from '@material-ui/core/Button';
 
-import DetailsIcon from '@material-ui/icons/Details';
+//import DetailsIcon from '@material-ui/icons/Details';
+import SettingsApplicationsIcon from '@material-ui/icons/SettingsApplications';
+import { green } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   table: {
@@ -28,12 +30,19 @@ const App = () => {
     'd978956e7a866d2b0816575052fbea8ffc4bfc14cdc57a53c09a185609ef6bd9';
 
   const [campaigns, setCampaigns] = useState([]);
+  const [modalInfo, setModalInfo] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [show, setShow] = useState(false);
+
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   useEffect(() => {
     getCampaign();
-  });
+  }, []);
 
   const getCampaign = async () => {
     const response = await fetch(
@@ -50,6 +59,13 @@ const App = () => {
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
+  };
+
+  const rowEvents = () => {
+    // onClick: (e, row) => {
+    //   console.log(row);
+    // },
+    console.log('tets')
   };
 
   return (
@@ -75,19 +91,19 @@ const App = () => {
                   )
                 : campaigns
               ).map((camp) => (
-                <TableRow key={camp.id}>
+                <TableRow key={camp.id} onClick={rowEvents}>
                   <TableCell component='th' scope='row'>
                     {camp.name}
                   </TableCell>
                   <TableCell align='center'>{camp.created_date}</TableCell>
                   <TableCell align='center'>{camp.results.length}</TableCell>
                   <TableCell align='center'>
-                    <Button variant='outlined' color='primary'>
+                    <Button variant='outlined' color='primary' size='small'>
                       {camp.status}
                     </Button>
                   </TableCell>
                   <TableCell align='center'>
-                    <DetailsIcon />
+                    <SettingsApplicationsIcon style={{ color: green[500] }} />
                   </TableCell>
                 </TableRow>
               ))}
